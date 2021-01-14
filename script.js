@@ -6,23 +6,20 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-    passwordText.value = password;
-
-  // passwordText.innerHTML=text;
+      passwordText.value = password;
 
 
-//text is not being grabbed .......
-}
 
 
 //Getting user input
 function generatePassword() {
-
+  var password = ""
   //variables for parts of password
-  var lowercase = ["abcdefghijklmnopqurstuvwxyz".split(" ")],
-      uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(" ")]
-      numbers = ["0123456789".split(" ")]; 
-      specialchar = ["!@#$%^&*()".split(" ")] //add more
+  const lowercase = ["abcdefghijklmnopqurstuvwxyz".split(" ")],
+       uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(" ")],
+       numbers = ["0123456789".split(" ")], 
+       specialchar = ["!@#$%^&*()".split(" ")] //add more
+  var
       text = lowercase + uppercase + numbers + specialchar;
    
 
@@ -86,13 +83,9 @@ function generatePassword() {
   for (var i = 0, n = text.length; i < userPasswordLength; i++) {
     password += text.charAt(Math.floor(Math.random() * n));
   } 
-  //somehow need to be filling a string concat??
+  return password; // ends function and returns the password
 
-
-  // text.innerHTML=password;
-
-    return password; // ends function and returns the password
-
+}
 }
 
 // Add event listener to generate button
