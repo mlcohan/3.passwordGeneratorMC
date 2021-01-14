@@ -6,9 +6,11 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+    passwordText.value = password;
 
-  passwordText.innerHTML=text;
+  // passwordText.innerHTML=text;
+
+
 //text is not being grabbed .......
 }
 
@@ -16,90 +18,82 @@ function writePassword() {
 //Getting user input
 function generatePassword() {
 
-          //variable for parts of password
-     var length = userPasswordLength, //necessary?
-         lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
-         uppercase = ["A", "B","C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-         numbers = "0123456789".split(" "); //does this work instead of quotes around the whole thing?
-         specialchar = "!@#" //add more
-         text = "";
-     // for (var i = 0, n = length; i < length; ++i) {
-     //    retVal += lowercase+uppercase+numbers+specialchar.charAt(Math.floor(Math.random() * n));
-     // }
-    // return retVal; //whats retVal do, i REPLACED IT W PASSWORD
+  //variables for parts of password
+  var lowercase = ["abcdefghijklmnopqurstuvwxyz".split(" ")],
+      uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(" ")]
+      numbers = ["0123456789".split(" ")]; 
+      specialchar = ["!@#$%^&*()".split(" ")] //add more
+      text = lowercase + uppercase + numbers + specialchar;
+   
 
   //Password Length
   var userPasswordLength = prompt("How many characters would you like your password? (8-128 characters")
 
+  //Invalid warning for passswords that are too short/long
     if (userPasswordLength < 8 || userPasswordLength > 128) { 
       window.alert("Invalid entry"); 
-        return  //this is new, see if this works
+      //ends loop because of invalid entry
+        return  
       }
     else{
       
+     //make the password the length of users choice 
       text.length === userPasswordLength 
 
     } 
-  //Upper Case letters y/n
+  //Lower Case letters y/n
   var userLowerCase = confirm("Do you want lowercase letters?")
 
     if (userLowerCase) { 
-      lowercase === true 
-    ;   
+      lowercase === true;   
     }
     else{
-  
-      lowercase === false
-
+      lowercase === false;
     }   
 
+  //Upper Case letters y/n
   var userUpperCase = confirm("Do you want uppercase letters")
 
     if (userUpperCase) { 
-    uppercase === true 
-    ;   
+    uppercase === true;   
     }
     else{
-    uppercase === false
+    uppercase === false;
     }
 
-    //numerical
+  //Numbers y/n
   var userNumeric = confirm("Do you want to use any numerical values")
 
     if (userNumeric) { 
-    numbers === true 
-    ;   
+    numbers === true;   
     }
     else{
-
     numbers === false;
     }
+
+    //Special Characters y/n
   var userSpecialCharacters = confirm("Do you want to use any special Characters?")
 
   if (userSpecialCharacters) { 
-    specialchar === true //this is a guess
-  ;   //how make password use lowercase
+    specialchar === true;   
   }
   else{
-
     specialchar === false;
   }
 
- 
 
-  for (var i = 0, i = password.length; i < length; i++) {
-    password += password.charAt(Math.floor(Math.random() * i));
-    console.log(password)
+  //loop to generate random password
+  for (var i = 0, n = text.length; i < userPasswordLength; i++) {
+    password += text.charAt(Math.floor(Math.random() * n));
   } 
   //somehow need to be filling a string concat??
 
 
-  // return password; // ends function and returns the password?? not working
- 
-  
+  // text.innerHTML=password;
+
+    return password; // ends function and returns the password
+
 }
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword) 
