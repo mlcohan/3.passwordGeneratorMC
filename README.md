@@ -16,25 +16,50 @@
 
 -Finally the user is asked to confirm the use of special characters. (Screenshot 7)
 
--After the user has chosen the parameters of their password, a password will be displayed on the webpage. (Screenshot 8)
+-If the user declines the use of all types of characters, an error message will appear. (Screenshot 8)
+
+-After the user has chosen the parameters of their password, a password will be displayed on the webpage. (Screenshot 9)
 
 ## Screenshots 
 
  Screenshot 1:
 
+![image](https://user-images.githubusercontent.com/38632935/104669153-61bc3080-568e-11eb-9865-8f77397841b9.png)
+
  Screenshot 2:
+
+ ![image](https://user-images.githubusercontent.com/38632935/104669276-9a5c0a00-568e-11eb-9f5d-22fc59df5720.png)
 
  Screenshot 3:
 
+![image](https://user-images.githubusercontent.com/38632935/104669346-b495e800-568e-11eb-98fa-54a686438f84.png)
+
+
  Screenshot 4:
+
+![image](https://user-images.githubusercontent.com/38632935/104669404-cd060280-568e-11eb-853d-aeaa834d8e61.png)
+
 
  Screenshot 5:
 
+ ![image](https://user-images.githubusercontent.com/38632935/104669468-ea3ad100-568e-11eb-8f75-11f344db7a7f.png)
+
+
  Screenshot 6:
+
+ ![image](https://user-images.githubusercontent.com/38632935/104669505-03dc1880-568f-11eb-8aa2-7549e03032a6.png)
 
  Screenshot 7:
 
+ ![image](https://user-images.githubusercontent.com/38632935/104669565-22421400-568f-11eb-906d-7ef82197aa6d.png)
+
  Screenshot 8:
+
+
+ Screenshot 9:
+
+ ![image](https://user-images.githubusercontent.com/38632935/104669657-5b7a8400-568f-11eb-8e27-d2757719655a.png)
+ 
 
 ## Links to Deployed App
 
