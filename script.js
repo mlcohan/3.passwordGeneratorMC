@@ -78,6 +78,12 @@ function generatePassword() {
     specialchar === false;
   }
 
+  if (!userLowerCase && !userUpperCase && !userNumeric && !userSpecialCharacters) { 
+    window.alert("Invalid entry"); 
+    //ends loop because of invalid entry
+      return  
+    }
+  else{
 
   //loop to generate random password
   for (var i = 0, n = text.length; i < userPasswordLength; i++) {
@@ -87,7 +93,7 @@ function generatePassword() {
 
 }
 }
-
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword) 
 
