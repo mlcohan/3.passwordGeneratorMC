@@ -18,11 +18,11 @@ function generatePassword() {
   const lowercase = ["abcdefghijklmnopqurstuvwxyz".split(" ")],
        uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(" ")],
        numbers = ["0123456789".split(" ")], 
-       specialchar = ["!@#$%^&*()".split(" ")] //add more
+       specialchar = [" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split(" ")] //add more
   var
       text = lowercase + uppercase + numbers + specialchar;
    
-
+      
   //Password Length
   var userPasswordLength = prompt("How many characters would you like your password? (8-128 characters")
 
